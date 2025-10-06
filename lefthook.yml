@@ -1,0 +1,7 @@
+remotes:
+  - git_url: git@github.com:dcdavidev/devkit
+    refetch: true
+    refetch_frequency: '24h'
+    configs:
+      - lefthook/commit-msg.yml
+      - lefthook/pre-commit.yml

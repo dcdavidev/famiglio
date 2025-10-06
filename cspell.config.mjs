@@ -112,6 +112,7 @@ const cspell = defineConfig({
   ],
 
   allowCompoundWords: true,
+  caseSensitive: false,
 
   words: [
     'davide',

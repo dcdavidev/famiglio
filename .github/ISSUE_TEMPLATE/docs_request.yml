@@ -1,0 +1,34 @@
+name: "📚 Documentation Request"
+description: Suggest improvements or report issues in documentation
+title: "[DOCS] <short description>"
+labels: [documentation]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Documentation Request
+        Please help me improve the docs 🙌
+
+  - type: textarea
+    id: docs-problem
+    attributes:
+      label: Problem or Gap
+      description: What's missing, confusing, or incorrect in the docs?
+      placeholder: "The setup instructions are unclear..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-change
+    attributes:
+      label: Suggested Change
+      description: How would you improve the docs?
+      placeholder: "Add an example of ... / Clarify that ..."
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Any links, references, or screenshots that help explain the change.

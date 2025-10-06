@@ -1,0 +1,48 @@
+name: "💡 Feature Request"
+description: Suggest a new idea or improvement
+title: "[FEAT] <short description>"
+labels: [enhancement]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature Request
+        Help me understand the improvement you'd like to see.
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Describe the Feature
+      description: What feature would you like to see?
+      placeholder: "Add support for ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: Why is this feature important? How would it improve the app?
+      placeholder: "This would allow us to ..."
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: How would you like this feature to work?
+      placeholder: "Implement via ..."
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you thought about different approaches?
+      placeholder: "Alternatively, we could ..."
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Add screenshots, references, or extra details.

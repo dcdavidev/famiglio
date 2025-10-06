@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for considering contributing to dcdavidev/famiglio! 🙏🧶❤️
+Thank you for considering contributing to dcdavidev/famiglio! 🙏❤️
 This document outlines the conventions, tools, and workflow I follow to maintain a clean and productive development process.
 
 ---

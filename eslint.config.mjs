@@ -1,6 +1,17 @@
 import { defineConfig, globalIgnores } from 'eslint/config';
-
-// TODO: uninstall all plugins, import `@dcdavidev/eslint-plugin`
+import importPlugin from 'eslint-plugin-import';
+import jsdoc from 'eslint-plugin-jsdoc';
+import nodeDependencies from 'eslint-plugin-node-dependencies';
+import packageJson from 'eslint-plugin-package-json';
+import prettierPlugin from 'eslint-plugin-prettier';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import unicorn from 'eslint-plugin-unicorn';
+import globals from 'globals';
+import jsoncParser from 'jsonc-eslint-parser';
+import tseslint from 'typescript-eslint';
+import js from '@eslint/js';
+import json from '@eslint/json';
+import markdown from '@eslint/markdown';
 
 /**
  * Rules overrides for javascript/typescript imports/exports

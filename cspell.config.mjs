@@ -1,7 +1,5 @@
 import { defineConfig } from 'cspell';
 
-// TODO: import `@dcdavidev/cspell-config`
-
 /** @type { import("@cspell/cspell-types").CSpellUserSettings } */
 const cspell = defineConfig({
   version: '0.2',

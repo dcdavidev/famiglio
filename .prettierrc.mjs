@@ -1,5 +1,3 @@
-// TODO: remove all plugin, import `@dcdavidev/prettier-config`
-
 /**
  * @type {import("prettier").Config}
  */

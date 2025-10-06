@@ -48,7 +48,7 @@
       "unitTestRunner": "none"
     },
     "@nx/node:application": {
-      "bundler": "none",
+      "bundler": "webpack",
       "e2eTestRunner": "none",
       "framework": "none",
       "linter": "none",

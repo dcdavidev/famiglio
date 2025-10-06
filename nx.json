@@ -20,5 +20,55 @@
         }
       }
     }
-  ]
+  ],
+  "generators": {
+    "@nx/plugin:plugin": {
+      "compiler": "tsc",
+      "e2eTestRunner": "none",
+      "unitTestRunner": "none",
+      "linter": "none",
+      "publishable": false,
+      "skipLintChecks": true
+    },
+    "@nx/plugin:executor": {
+      "skipLintChecks": true,
+      "unitTestRunner": "none"
+    },
+    "@nx/plugin:generator": {
+      "skipLintChecks": true,
+      "unitTestRunner": "none"
+    },
+    "@nx/js:library": {
+      "bundler": "tsc",
+      "includeBabelRc": false,
+      "linter": "none",
+      "minimal": true,
+      "publishable": false,
+      "strict": true,
+      "unitTestRunner": "none"
+    },
+    "@nx/node:application": {
+      "bundler": "none",
+      "e2eTestRunner": "none",
+      "framework": "none",
+      "linter": "none",
+      "port": 4000,
+      "unitTestRunner": "none"
+    },
+    "@nx/node:library": {
+      "compiler": "tsc",
+      "linter": "none",
+      "publishable": false,
+      "strict": true,
+      "unitTestRunner": "none"
+    }
+  },
+  "targetDefaults": {
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"],
+      "outputs": ["{projectRoot}/dist"]
+    }
+  }
 }

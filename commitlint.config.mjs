@@ -1,5 +1,3 @@
-// TODO: add and configure `@dcdavidev/commitlint-config`; remove `conventional-changelog-conventionalcommits`
-
 export default {
   extends: ['@commitlint/config-conventional'],
   parserPreset: 'conventional-changelog-conventionalcommits',

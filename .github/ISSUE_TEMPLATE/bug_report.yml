@@ -1,6 +1,6 @@
-name: "🐞 Bug Report"
+name: '🐞 Bug Report'
 description: Report a bug to help me improve _Famiglio_
-title: "[BUG] <short description>"
+title: '[BUG] <short description>'
 labels: [bug]
 assignees: []
 
@@ -16,7 +16,7 @@ body:
     attributes:
       label: Describe the Bug
       description: What went wrong?
-      placeholder: "A clear and concise description of the bug."
+      placeholder: 'A clear and concise description of the bug.'
     validations:
       required: true
 
@@ -37,7 +37,7 @@ body:
     attributes:
       label: Expected Behavior
       description: What did you expect to happen instead?
-      placeholder: "I expected the app to ..."
+      placeholder: 'I expected the app to ...'
     validations:
       required: true
 
@@ -46,11 +46,11 @@ body:
     attributes:
       label: Screenshots or Logs
       description: Attach screenshots or logs if applicable.
-      placeholder: "Paste logs or drag-and-drop screenshots here."
+      placeholder: 'Paste logs or drag-and-drop screenshots here.'
 
   - type: input
     id: environment
     attributes:
       label: Environment
       description: Describe your setup (OS, Node.js, etc.)
-      placeholder: "Alma Linux 9, Ubuntu 22.04, Node.js 22.x, etc"
+      placeholder: 'Alma Linux 9, Ubuntu 22.04, Node.js 22.x, etc'

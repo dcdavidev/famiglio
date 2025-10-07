@@ -1,6 +1,6 @@
-name: "📚 Documentation Request"
+name: '📚 Documentation Request'
 description: Suggest improvements or report issues in documentation
-title: "[DOCS] <short description>"
+title: '[DOCS] <short description>'
 labels: [documentation]
 assignees: []
 
@@ -16,7 +16,7 @@ body:
     attributes:
       label: Problem or Gap
       description: What's missing, confusing, or incorrect in the docs?
-      placeholder: "The setup instructions are unclear..."
+      placeholder: 'The setup instructions are unclear...'
     validations:
       required: true
 
@@ -25,7 +25,7 @@ body:
     attributes:
       label: Suggested Change
       description: How would you improve the docs?
-      placeholder: "Add an example of ... / Clarify that ..."
+      placeholder: 'Add an example of ... / Clarify that ...'
 
   - type: textarea
     id: context

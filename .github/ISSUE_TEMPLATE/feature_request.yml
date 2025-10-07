@@ -1,6 +1,6 @@
-name: "💡 Feature Request"
+name: '💡 Feature Request'
 description: Suggest a new idea or improvement
-title: "[FEAT] <short description>"
+title: '[FEAT] <short description>'
 labels: [enhancement]
 assignees: []
 
@@ -16,7 +16,7 @@ body:
     attributes:
       label: Describe the Feature
       description: What feature would you like to see?
-      placeholder: "Add support for ..."
+      placeholder: 'Add support for ...'
     validations:
       required: true
 
@@ -25,21 +25,21 @@ body:
     attributes:
       label: Use Case
       description: Why is this feature important? How would it improve the app?
-      placeholder: "This would allow us to ..."
+      placeholder: 'This would allow us to ...'
 
   - type: textarea
     id: proposed-solution
     attributes:
       label: Proposed Solution
       description: How would you like this feature to work?
-      placeholder: "Implement via ..."
+      placeholder: 'Implement via ...'
 
   - type: textarea
     id: alternatives
     attributes:
       label: Alternatives Considered
       description: Have you thought about different approaches?
-      placeholder: "Alternatively, we could ..."
+      placeholder: 'Alternatively, we could ...'
 
   - type: textarea
     id: context

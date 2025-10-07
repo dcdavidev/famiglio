@@ -262,7 +262,7 @@ export default defineConfig([
 
   // --- Js/Ts ---
   {
-    files: ['**/*.{js,ts,cjs,cts,mjs,mts,jsx,tsx'],
+    files: ['**/*.{js,ts,cjs,cts,mjs,mts,jsx,tsx}'],
     plugins: {
       jsdoc,
       prettier: prettierPlugin,

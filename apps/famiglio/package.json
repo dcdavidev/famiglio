@@ -1,0 +1,94 @@
+{
+  "name": "@dcdavidev/famiglio",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Famiglio — a GitHub automation daemon that watches over repositories and triggers workflows.",
+  "bugs": {
+    "url": "https://github.com/dcdavidev/famiglio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcdavidev/famiglio.git",
+    "directory": "apps/famiglio"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Davide Di Criscito",
+    "email": "davidedc@outlook.com",
+    "url": "https://github.com/dcdavidev"
+  },
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.51.0",
+    "@octokit/app": "^16.1.1",
+    "@octokit/auth-app": "^8.1.1",
+    "@octokit/request": "^10.0.5",
+    "@octokit/webhooks": "^14.1.3",
+    "express": "^5.1.0",
+    "http-proxy-middleware": "^3.0.5",
+    "pino": "^10.0.0",
+    "pino-pretty": "^13.1.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^20.19.9"
+  },
+  "nx": {
+    "name": "famiglio",
+    "targets": {
+      "prune-lockfile": {
+        "dependsOn": [
+          "build"
+        ],
+        "cache": true,
+        "executor": "@nx/js:prune-lockfile",
+        "outputs": [
+          "{workspaceRoot}/apps/famiglio/dist/package.json",
+          "{workspaceRoot}/apps/famiglio/dist/package-lock.json"
+        ],
+        "options": {
+          "buildTarget": "build"
+        }
+      },
+      "copy-workspace-modules": {
+        "dependsOn": [
+          "build"
+        ],
+        "cache": true,
+        "outputs": [
+          "{workspaceRoot}/apps/famiglio/dist/workspace_modules"
+        ],
+        "executor": "@nx/js:copy-workspace-modules",
+        "options": {
+          "buildTarget": "build"
+        }
+      },
+      "prune": {
+        "dependsOn": [
+          "prune-lockfile",
+          "copy-workspace-modules"
+        ],
+        "executor": "nx:noop"
+      },
+      "serve": {
+        "continuous": true,
+        "executor": "@nx/js:node",
+        "defaultConfiguration": "development",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "buildTarget": "famiglio:build",
+          "runBuildTargetDependencies": false
+        },
+        "configurations": {
+          "development": {
+            "buildTarget": "famiglio:build:development"
+          },
+          "production": {
+            "buildTarget": "famiglio:build:production"
+          }
+        }
+      }
+    }
+  }
+}

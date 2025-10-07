@@ -77,7 +77,7 @@ const rulesImportsExports = {
         ['^[^@./]', String.raw`^@\w`], // third-party
         ['^react$', '^react-dom$', '^react'],
         ['^@mui', '^@material-ui', '^@tabler'],
-        ['^(@dcdavidev)(/.*|$)', String.raw`^\.\.?/`], // internal + relative
+        ['^(@famiglio|@dcdavidev)(/.*|$)', String.raw`^\.\.?/`], // internal + relative
         [
           String.raw`^.+\.s?css$`,
           String.raw`^.+\.(png|jpe?g|gif|webp|svg)$`,

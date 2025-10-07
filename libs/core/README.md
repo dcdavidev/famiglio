@@ -1,7 +1,6 @@
 # @famiglio/core
 
-> Core library for the **Famiglio GitHub App** — providing configuration loading, structured logging, and foundational utilities used across all Famiglio modules.  
-> Secure. Typed. Reliable.
+> Core library for the **Famiglio GitHub App**.
 
 ---
 
@@ -106,16 +105,6 @@ nx watch core
 ```
 
 Output is generated in `libs/core/dist`.
-
----
-
-## 📦 Installation
-
-This library is internal to the **Famiglio** monorepo but can be imported by other workspace packages:
-
-```bash
-pnpm add @famiglio/core
-```
 
 ---
 

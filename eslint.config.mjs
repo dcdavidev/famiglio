@@ -260,14 +260,9 @@ export default defineConfig([
     'Windows system artifacts'
   ),
 
+  // --- Js/Ts ---
   {
-    files: ['**/*.{js,ts,mjs,mts,jsx,tsx}'],
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
-    },
+    files: ['**/*.{js,ts,cjs,cts,mjs,mts,jsx,tsx'],
     plugins: {
       jsdoc,
       prettier: prettierPlugin,
@@ -280,24 +275,28 @@ export default defineConfig([
       nodeDependencies.configs['flat/recommended'],
       unicorn.configs.recommended,
     ],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
     rules: {
       ...rulesImportsExports,
       ...rulesJavascript,
     },
   },
   {
-    files: ['**/*.{cjs,cts}'],
+    files: ['**/*.{cjs,cts}', '**/webpack.config.{js,cjs}'],
     languageOptions: {
       globals: {
         ...globals.commonjs,
       },
     },
-    extends: [
-      js.configs.recommended,
-      tseslint.configs.recommended,
-      nodeDependencies.configs['flat/recommended'],
-      unicorn.configs.recommended,
-    ],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+      'unicorn/prefer-module': 'off',
+    },
   },
   {
     files: ['**/*.{js,ts,mjs,mts,jsx,tsx}'],
@@ -307,14 +306,9 @@ export default defineConfig([
         ...globals.es2022,
       },
     },
-    extends: [
-      js.configs.recommended,
-      tseslint.configs.recommended,
-      nodeDependencies.configs['flat/recommended'],
-      unicorn.configs.recommended,
-    ],
   },
 
+  // --- Json ---
   {
     files: ['**/*.json'],
     plugins: { json },
@@ -358,6 +352,7 @@ export default defineConfig([
     },
   },
 
+  // --- Markdown ---
   {
     files: ['**/*.md'],
     plugins: { markdown },
